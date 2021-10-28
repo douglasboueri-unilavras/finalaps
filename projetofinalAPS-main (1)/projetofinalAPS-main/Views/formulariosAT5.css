@@ -1,0 +1,77 @@
+*{
+    font-style: oblique;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+table, #table2 {
+    background-color: rgb(202, 138, 221);
+
+   
+}
+body{
+    text-align: center;
+    background-image: url(https://ecommerce-platforms.com/wp-content/uploads/2014/04/12-free-blurred-backgrounds.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.botao{
+    font-size: 2.1em;
+    background:rgba(255, 230, 0, 0.938);
+    border: 0;
+    margin-bottom: 1em;
+    color: rgb(0, 0, 0);
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0,2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0,5);
+    position: absolute;
+    transform: translate(50%,- 50%);
+    background-origin: padding-box;
+    align-items: center;
+
+}
+
+.botao:hover{
+    background-color: rgb(236, 14, 236);
+    border: saddlebrown;
+    font-weight: bold;
+    
+}
+#id_categoria{
+    font-family: fantasy;
+    font-style: italic
+    
+}
+
+
+label{
+    font-size: 40px;
+}
+td{
+    padding: 13px;
+}
+td:nth-last-child(2){
+    background-color: rgb(172, 55, 0);
+}
+
+.thead{
+    background-color: rgba(240, 10, 10, 0.377);
+}
+
+#tbody2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolt;
+    background-color: rgb(107, 10, 151);
+}
+
+.vermelho{
+    background-color: red;
+}
+
+.box { 
+    background:rgb(54, 199, 114); 
+    width:300px; 
+    height:200px; 
+}

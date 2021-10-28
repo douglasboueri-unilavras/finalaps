@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="formulariosAT5.css">
+        <script src="./jquery-3.6.0.js"> </script>
+        <script src="./formulario(pr).js"> </script>
+    </head>
+    <body>
+        <form name="dados" autocomplete="off" >
+            <table align="center"  >
+                <tr>
+                    <td> <label>NOME:</label></td>
+                    <td><input type="text" id="id_nome" name="nome" placeholder="Digite o nome do produto" size="25" onchange="removerClasse(this)" ></td>
+                </tr>
+                <br>
+                <tr>
+                    <td> <label>QUANTIDADE:</label></td>
+                    <td><input type="number" id="id_quantidade" name="quantidade" placeholder="Digite a quantidade " size="20" minlength="1" onchange="removerClasse(this)"></td>
+
+                  
+                </tr>
+                <br>
+                <tr>
+                    <td> <label>DATA/VALIDADE:</label></td>
+                    <td><input type="date" id="id_data" name="data"></td>
+                    
+                </tr>
+                    <td><label>CATEGORIA:</label></td>
+                    <td>
+                        <select name="categoria" id="id_categoria">
+                            <option value="0">escolha..</option>
+                           
+                        </select>
+                        
+                    
+                        
+
+                        
+                    <tr>
+                        
+                        <td> EMBALAGEM:</td>
+                        
+                        <td>
+                            <input type="checkbox" name="embalagem" value="1">LATA
+                            <input type="checkbox" name="embalagem" value="2">PET <br>
+                            <input type="checkbox" name="embalagem" value="3">PLASTICO 
+                            <input type="checkbox" name="embalagem" value="4">PAPELÃO
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GLUTEM:</td>
+                        <td>
+                            <input type="radio" name="glutem" value="true">Sim 
+                            <input type="radio" name="glutem" value="false">Não
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        
+                            <button  onclick="disparo()" class= "botao" type="button">Salvar</button>
+                        </td>
+
+            </table>
+            <br>
+            <br>
+            <br>
+
+            <table>
+                <thead class="thead2">
+                    <tr>
+                        <th>ID</th>
+
+                        <th>NOME</th>
+
+                        <th>PREÇO $$</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="tbody2">
+                    
+    
+                </tbody>
+            </table>
+    
+         
+		</form>
+    </body>
+</html>
