@@ -1,6 +1,7 @@
 $(document).ready(function(){
     listarcategoria();
-    tbody2();
+    listarproduto();
+    excluir();
 });
 
 
@@ -21,52 +22,46 @@ function listarcategoria(){
 }
 
 
-function tbody2(){
+
+
+function listarproduto(){
     $.get('https://localhost:5001/Produto/Listar')
-    .done(function(resposta){
-        for(i = 0; i < resposta.length; i++){
-            let linha = $('<tr></tr>');
+        .done(function(resposta) { 
+            $('#tbody2 tr').remove();
+            for(i = 0; i < resposta.length; i++) {
+                let dados = resposta[i];
+                
+                $('#tbody2').append($('<tr></tr>').attr('id', dados.id));
+                
+                $('#' + dados.id).append($('<td></td>').html(dados.id));
+                $('#' + dados.id).append($('<td></td>').html(dados.nome));
+                $('#' + dados.id).append($('<td></td>').html(dados.preço));
+                
 
+                $('#' + dados.id).append($('<td></td>').html('<button type=\"button\" onclick=\"visualizar('+ dados.id +')\">Visualizar</button> <button type=\"button\" onclick=\"editar('+ dados.id +')\">Editar</button> <button type=\"button\" onclick=\"excluir('+ dados.id +')\">Excluir</button>'));
 
-            let celulaid = $('<td></td>').html(resposta[i].id);
-            linha.append(celulaid);
-
-
-            let celulanome = $('<td></td>').html(resposta[i].nome);
-            linha.append(celulanome);
-
-
-            let celulapreço = $('<td></td>').html(resposta[i].preço);
-            linha.append(celulapreço);
-
-
-            
-            
-
-
-            
-            
-
-            
-            
-
-            
-            
-
-
-           
-
-            $('#tbody2').append(linha)
-
-            
-        }
-        
-        
-        
-    })
-     
+            }
+        })
+        .fail(function(erro, mensagem, excecao) { 
+            alert(mensagem + ': ' + excecao);
+        });
 }
 
+function excluir(id) {
+    $.ajax({
+        type: 'DELETE',
+        url: 'https://localhost:5001/Produto/Excluir',
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(id),
+        success: function(resposta) { 
+            listarproduto();
+            alert(resposta);
+        },
+        error: function(erro, mensagem, excecao) { 
+            alert(mensagem + ': ' + excecao);
+        }
+    });
+}
 
 
         
@@ -85,16 +80,11 @@ function disparo(){
     }
 
 
-    validado = validar(dados.quantidade, 'quantidade');
+    validado = validar(dados.preço, 'preço');
     if(!validado){
         erro = true ;
     }
 
-
-    validado = validar(dados.data , 'data');
-    if(!validado){
-        erro = true ;
-    }
 
 
     validado = validar(dados.glutem, 'glutem');

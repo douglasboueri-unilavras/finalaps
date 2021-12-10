@@ -24,5 +24,34 @@ namespace projetofinalAPS.Controllers
         {
             return contexto.Produto.ToList();
         }
+
+
+        [HttpDelete]
+        public string excluir([FromBody]int id)
+        {
+            Produto dados = contexto.Produto.FirstOrDefault(p => p.Id == id);
+            if (dados == null)
+            {
+                return "Não foi encontrado PRODUTO para o ID informado!";
+            }
+            else
+            {
+                contexto.Remove(dados);
+                contexto.SaveChanges();
+        
+                return "PRODUTO excluído com sucesso!";
+            }
+        }
+
+        [HttpPost]
+        public Produto create([FromBody]Produto produto)
+        {
+                      
+            Produto produtosalvo = contexto.Add(produto).Entity;
+            contexto.SaveChanges();
+            return produtosalvo;
+        }
+
+        
     }
 }

@@ -6170,19 +6170,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Douglas Boueri\\.nuget\\packages\\": {}
+    "/home/alex/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Douglas Boueri\\Downloads\\projetofinalAPS-main (1)\\projetofinalAPS-main\\projetofinalAPS.csproj",
+      "projectUniqueName": "/home/alex/Área de trabalho/projetofinalAPS/projetofinalAPS.csproj",
       "projectName": "projetofinalAPS",
-      "projectPath": "C:\\Users\\Douglas Boueri\\Downloads\\projetofinalAPS-main (1)\\projetofinalAPS-main\\projetofinalAPS.csproj",
-      "packagesPath": "C:\\Users\\Douglas Boueri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Douglas Boueri\\Downloads\\projetofinalAPS-main (1)\\projetofinalAPS-main\\obj\\",
+      "projectPath": "/home/alex/Área de trabalho/projetofinalAPS/projetofinalAPS.csproj",
+      "packagesPath": "/home/alex/.nuget/packages/",
+      "outputPath": "/home/alex/Área de trabalho/projetofinalAPS/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Douglas Boueri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/alex/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6192,7 +6192,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6204,7 +6203,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -6229,8 +6227,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.19, 3.1.19]"
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
           }
         ],
         "frameworkReferences": {
@@ -6241,7 +6239,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.120/RuntimeIdentifierGraph.json"
       }
     }
   }

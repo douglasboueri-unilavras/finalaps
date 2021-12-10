@@ -31,7 +31,7 @@ namespace projetofinalAPS
             services.AddControllers();
  
             services.AddDbContext<BDContexto>(option =>
-                option.UseMySQL("server=localhost;port=3306;user=root;password=Goku1234;database=projectIntegrador")
+                option.UseMySQL("server=127.0.0.1;port=3306;user=root;password=gt4w9876;database=projeto_final")
             );
         }
  

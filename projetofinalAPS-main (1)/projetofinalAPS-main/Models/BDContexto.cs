@@ -22,7 +22,7 @@ namespace projetofinalAPS.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=simoneminhamae;database=projeto_final");
+                optionsBuilder.UseMySQL("server=127.0.0.1;port=3306;user=root;password=gt4w9876;database=projeto_final");
             }
         }
 
